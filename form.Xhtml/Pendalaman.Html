@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Reservation Hotel Room</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+
+    <div class="page">
+      <header class="hero">
+        <h1>Reservation Hotel Room</h1>
+        <p class="subtitle">Plan your stay with comfort and style</p>
+      </header>
+
+      <form action="" method="post" class="card">
+        <!-- Personal Date -->
+        <div class="form-section">
+          <div class="section-title"><span>Personal Date</span></div>
+          <table class="form-grid">
+            <tr>
+              <td class="label">1. Name</td>
+              <td><input type="text" id="name" name="name" size="30" class="control" /></td>
+            </tr>
+            <tr>
+              <td class="label">2. Gender</td>
+              <td><input type="text" id="gender" name="gender" size="30" class="control" /></td>
+            </tr>
+            <tr>
+              <td class="label">3. Email Address</td>
+              <td><input type="text" id="email" name="email" size="30" class="control" /></td>
+            </tr>
+            <tr>
+              <td class="label">4. Telp Number</td>
+              <td><input type="text" id="telp" name="telp" size="30" class="control" /></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Reservation Room form -->
+        <div class="form-section">
+          <div class="section-title"><span>Reservation Room form</span></div>
+          <table class="form-grid">
+            <tr>
+              <td class="label">1. Reservation Name</td>
+              <td><input type="text" id="resname" name="resname" size="30" class="control" /></td>
+            </tr>
+            <tr>
+              <td class="label">2. Booking date</td>
+              <td><input type="text" id="booking" name="booking" size="20" class="control" placeholder="YYYY-MM-DD" /></td>
+            </tr>
+            <tr>
+              <td class="label">3. Room Type</td>
+              <td>
+                <select id="roomtype" name="roomtype" class="control">
+                  <option>Single</option>
+                  <option selected="selected">Deluxe</option>
+                  <option>Suite</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">4. Bed Type</td>
+              <td class="inline">
+                <label class="option" for="bed-single">
+                  <input type="radio" id="bed-single" name="bed" value="Single bed" checked="checked" /> Single bed
+                </label>
+                <label class="option" for="bed-double">
+                  <input type="radio" id="bed-double" name="bed" value="Double bed" /> Double bed
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">5. Breakfast</td>
+              <td class="inline">
+                <label class="option" for="bf-with">
+                  <input type="radio" id="bf-with" name="breakfast" value="With Breakfast" /> With Breakfast
+                </label>
+                <label class="option" for="bf-without">
+                  <input type="radio" id="bf-without" name="breakfast" value="Without Breakfast" /> Without Breakfast
+                </label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Payment -->
+        <div class="form-section">
+          <div class="section-title"><span>Payment</span></div>
+          <table class="form-grid">
+            <tr>
+              <td class="label">1. Check in date</td>
+              <td><input type="text" id="checkin" name="checkin" size="20" class="control" placeholder="YYYY-MM-DD" /></td>
+            </tr>
+            <tr>
+              <td class="label">2. Check out date</td>
+              <td><input type="text" id="checkout" name="checkout" size="20" class="control" placeholder="YYYY-MM-DD" /></td>
+            </tr>
+            <tr>
+              <td class="label">3. Payment Method</td>
+              <td>
+                <select id="pay" name="pay" class="control">
+                  <option selected="selected">cash</option>
+                  <option>credit card</option>
+                  <option>transfer</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="actions">
+          <input type="submit" value="Submit Reservation" class="btn-primary" />
+          <input type="reset" value="Reset" class="btn-ghost" />
+        </div>
+      </form>
+
+      <footer class="footnote">
+        <small>&#169; 2025 Your Hotel Brand</small>
+      </footer>
+    </div>
+
+  </body>
+</html>

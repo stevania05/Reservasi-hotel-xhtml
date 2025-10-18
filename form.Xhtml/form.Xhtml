@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Tugas XHTML – Form Mahasiswa &amp; Reservasi Hotel</title>
+    <style type="text/css">
+      /* Gaya sederhana agar tampil mirip contoh (kotak-kotak tabel) */
+      body { margin:12px; font-family: Arial, Helvetica, sans-serif; }
+      h1, h2 { font-size:18px; margin:0 0 8px 0; }
+      p.title { font-weight:bold; margin:24px 0 8px 0; }
+      table.boxed { border:1px solid #000; border-collapse:collapse; width:720px; }
+      table.boxed td { border:1px solid #000; padding:6px; vertical-align:top; }
+      .section { background:#f5f5f5; font-weight:bold; }
+      .center { text-align:center; }
+      input[type="text"], input[type="password"], select, textarea { font:inherit; }
+    </style>
+  </head>
+  <body>
+
+    <!-- ========================================================= -->
+    <!-- 1) FORMULIR REGISTRASI DATA MAHASISWA                     -->
+    <!-- ========================================================= -->
+    <h1>Formulir Registrasi Data Mahasiswa</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+      <table class="boxed">
+        <tr>
+          <td><label for="nomhs"><strong>Nomor Mahasiswa</strong></label></td>
+          <td><input type="text" id="nomhs" name="nomhs" size="30" /></td>
+        </tr>
+        <tr>
+          <td><label for="namamhs"><strong>Nama Mahasiswa</strong></label></td>
+          <td><input type="text" id="namamhs" name="namamhs" size="30" /></td>
+        </tr>
+        <tr>
+          <td><strong>Jenis Kelamin</strong></td>
+          <td>
+            <input type="radio" id="jk-l" name="jk" value="Laki-laki" />
+            <label for="jk-l">Laki-Laki</label>
+            <input type="radio" id="jk-p" name="jk" value="Perempuan" />
+            <label for="jk-p">Perempuan</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="prodi"><strong>Program Studi</strong></label></td>
+          <td>
+            <select id="prodi" name="prodi">
+              <option>Teknik Informatika</option>
+              <option>Teknik Industri</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="email"><strong>Alamat Email</strong></label></td>
+          <td><input type="text" id="email" name="email" size="30" /></td>
+        </tr>
+        <tr>
+          <td><label for="telepon"><strong>Nomor Telepon</strong></label></td>
+          <td><input type="text" id="telepon" name="telepon" size="30" /></td>
+        </tr>
+        <tr>
+          <td><label for="password"><strong>Password</strong></label></td>
+          <td><input type="password" id="password" name="password" size="30" /></td>
+        </tr>
+        <tr>
+          <td><label for="photo"><strong>Photo</strong></label></td>
+          <td>
+            <input type="file" id="photo" name="photo"
+              accept="image/gif, image/jpeg, image/png" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="namasmu"><strong>Nama Sekolah Asal (SMA)</strong></label></td>
+          <td><input type="text" id="namasmu" name="namasmu" size="30" /></td>
+        </tr>
+        <tr>
+          <td><label for="alamatsmu"><strong>Alamat Sekolah Asal (SMA)</strong></label></td>
+          <td><input type="text" id="alamatsmu" name="alamatsmu" size="30" /></td>
+        </tr>
+        <tr>
+          <td><label for="teleponsmu"><strong>Telepon Sekolah Asal (SMA)</strong></label></td>
+          <td><input type="text" id="teleponsmu" name="teleponsmu" size="30" /></td>
+        </tr>
+        <tr>
+          <td valign="top"><strong>Hal Favorit</strong></td>
+          <td>
+            <p><strong>Musik</strong></p>
+            <input type="checkbox" id="musik-pop" name="musik" value="Pop" />
+            <label for="musik-pop">Pop</label>
+            <input type="checkbox" id="musik-rock" name="musik" value="Rock" />
+            <label for="musik-rock">Rock</label>
+            <input type="checkbox" id="musik-jazz" name="musik" value="Jazz" />
+            <label for="musik-jazz">Jazz</label>
+
+            <p><strong>Film</strong></p>
+            <input type="checkbox" id="film-drama" name="film" value="Drama" />
+            <label for="film-drama">Drama</label>
+            <input type="checkbox" id="film-action" name="film" value="Action" />
+            <label for="film-action">Action</label>
+            <input type="checkbox" id="film-scifi" name="film" value="Sci-Fi" />
+            <label for="film-scifi">Sci-Fi</label>
+
+            <p><strong>Makanan</strong></p>
+            <input type="checkbox" id="makanan-seafood" name="makanan" value="Seafood" />
+            <label for="makanan-seafood">Seafood</label>
+            <input type="checkbox" id="makanan-tradisional" name="makanan" value="Tradisional" />
+            <label for="makanan-tradisional">Tradisional</label>
+            <input type="checkbox" id="makanan-fastfood" name="makanan" value="Fastfood" />
+            <label for="makanan-fastfood">Fastfood</label>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="resume"><strong>Resume</strong></label></td>
+          <td><textarea id="resume" name="resume" rows="8" cols="30"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="center">
+            <input type="submit" name="simpan" value="Simpan" />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <!-- ========================================================= -->
+    <!-- 2) RESERVATION HOTEL ROOM                                 -->
+    <!-- ========================================================= -->
+    <h2>Reservation Hotel Room</h2>
+    <form action="" method="post">
+      <table class="boxed">
+        <!-- Personal Date (ikut teks contoh) -->
+        <tr><td colspan="2" class="section">Personal Date</td></tr>
+        <tr>
+          <td>1. Name</td>
+          <td><input type="text" id="name" name="name" size="30" /></td>
+        </tr>
+        <tr>
+          <td>2. Gender</td>
+          <td><input type="text" id="gender" name="gender" size="30" /></td>
+        </tr>
+        <tr>
+          <td>3. Email Address</td>
+          <td><input type="text" id="email2" name="email2" size="30" /></td>
+        </tr>
+        <tr>
+          <td>4. Telp Number</td>
+          <td><input type="text" id="telp" name="telp" size="30" /></td>
+        </tr>
+
+        <!-- Reservation Room form -->
+        <tr><td colspan="2" class="section">Reservation Room form</td></tr>
+        <tr>
+          <td>1. Reservation Name</td>
+          <td><input type="text" id="resname" name="resname" size="30" /></td>
+        </tr>
+        <tr>
+          <td>2. Booking date</td>
+          <td><input type="text" id="booking" name="booking" size="20" /></td>
+        </tr>
+        <tr>
+          <td>3. Room Type</td>
+          <td>
+            <select id="roomtype" name="roomtype">
+              <option>Single</option>
+              <option selected="selected">Deluxe</option>
+              <option>Suite</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>4. Bed Type</td>
+          <td>
+            <input type="radio" id="bed-single" name="bed" value="Single bed" checked="checked" />
+            <label for="bed-single">Single bed</label>
+            <input type="radio" id="bed-double" name="bed" value="Double bed" />
+            <label for="bed-double">Double bed</label>
+          </td>
+        </tr>
+        <tr>
+          <td>5. Breakfast</td>
+          <td>
+            <input type="radio" id="bf-with" name="breakfast" value="With Breakfast" />
+            <label for="bf-with">With Breakfast</label>
+            <input type="radio" id="bf-without" name="breakfast" value="Without Breakfast" />
+            <label for="bf-without">Without Breakfast</label>
+          </td>
+        </tr>
+
+        <!-- Payment -->
+        <tr><td colspan="2" class="section">Payment</td></tr>
+        <tr>
+          <td>1. Check in date</td>
+          <td><input type="text" id="checkin" name="checkin" size="20" /></td>
+        </tr>
+        <tr>
+          <td>2. Check out date</td>
+          <td><input type="text" id="checkout" name="checkout" size="20" /></td>
+        </tr>
+        <tr>
+          <td>3. Payment Method</td>
+          <td>
+            <select id="pay" name="pay">
+              <option selected="selected">cash</option>
+              <option>credit card</option>
+              <option>transfer</option>
+            </select>
+          </td>
+        </tr>
+
+        <!-- Submit -->
+        <tr>
+          <td colspan="2" class="center">
+            <input type="submit" value="submit" />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+  </body>
+</html>
+
