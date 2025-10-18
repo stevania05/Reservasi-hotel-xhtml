@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Reservation Hotel Room</title>
+
+    <style type="text/css">
+      /* ===== Base ===== */
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1f2937; /* slate-800 */
+        background:
+          radial-gradient(1200px 600px at 20% -10%, #eef2ff 0%, transparent 50%),
+          radial-gradient(1000px 600px at 120% 10%, #ecfeff 0%, transparent 50%),
+          #f8fafc; /* slate-50 */
+      }
+      .page { max-width: 920px; margin: 28px auto 40px; padding: 0 16px; }
+
+      /* ===== Hero ===== */
+      .hero {
+        background: linear-gradient(135deg, #3b82f6, #06b6d4);
+        border-radius: 16px;
+        color: #fff;
+        padding: 28px 24px;
+        box-shadow: 0 10px 24px rgba(2, 6, 23, 0.25);
+      }
+      .hero h1 { margin: 0 0 6px 0; font-size: 28px; letter-spacing: .3px; }
+      .subtitle { margin: 0; opacity: .95; }
+
+      /* ===== Card (Form wrapper) ===== */
+      .card {
+        margin-top: 18px;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        box-shadow: 0 12px 28px rgba(2, 6, 23, .08);
+        padding: 14px;
+      }
+
+      /* ===== Section ===== */
+      .form-section {
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
+        overflow: hidden;
+        margin: 12px;
+        background: #ffffff;
+      }
+      .section-title {
+        background: linear-gradient(90deg, #eff6ff, #ecfeff);
+        border-bottom: 1px solid #e5e7eb;
+        padding: 12px 14px;
+        font-weight: bold;
+        color: #0f172a;
+      }
+
+      /* ===== Table Grid ===== */
+      .form-grid { width: 100%; border-collapse: collapse; }
+      .form-grid td {
+        border-top: 1px dashed #e5e7eb;
+        padding: 12px 14px;
+        vertical-align: middle;
+      }
+      .form-grid tr:first-child td { border-top: none; }
+      .label { width: 28%; color: #475569; font-weight: bold; }
+
+      /* ===== Controls ===== */
+      .control {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        background: #fff;
+        font: inherit;
+        outline: none;
+        transition: box-shadow .2s ease, border-color .2s ease, transform .03s ease;
+      }
+      .control:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 4px rgba(59,130,246,0.18);
+        transform: translateY(-1px);
+      }
+      .control::placeholder { color: #9ca3af; }
+
+      .inline { display: flex; gap: 16px; flex-wrap: wrap; }
+      .option { display: inline-flex; align-items: center; gap: 8px; color: #0f172a; }
+      .option input { transform: translateY(1px); }
+
+      /* ===== Actions ===== */
+      .actions {
+        display: flex; gap: 12px; justify-content: flex-end;
+        padding: 10px 18px 18px;
+      }
+      .btn-primary, .btn-ghost {
+        padding: 10px 16px; font: inherit; border-radius: 12px; cursor: pointer;
+        user-select: none; transition: transform .06s, box-shadow .2s, background .2s, color .2s, border-color .2s;
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, #3b82f6, #06b6d4);
+        color: #fff; border: 1px solid rgba(59,130,246,.5);
+        box-shadow: 0 6px 14px rgba(2,6,23,.15);
+      }
+      .btn-primary:hover { box-shadow: 0 10px 22px rgba(2,6,23,.2); transform: translateY(-1px); }
+      .btn-primary:active { transform: translateY(0); }
+      .btn-ghost { background: #fff; color: #0f172a; border: 1px solid #cbd5e1; }
+      .btn-ghost:hover { background: #f8fafc; border-color: #94a3b8; }
+
+      .footnote { text-align: center; color: #64748b; margin-top: 18px; }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <h1>Reservation Hotel Room</h1>
+        <p class="subtitle">Plan your stay with comfort and style</p>
+      </header>
+
+      <form action="" method="post" class="card">
+        <div class="form-section">
+          <div class="section-title"><span>Personal Date</span></div>
+          <table class="form-grid">
+            <tr><td class="label">1. Name</td><td><input type="text" id="name" name="name" size="30" class="control" /></td></tr>
+            <tr><td class="label">2. Gender</td><td><input type="text" id="gender" name="gender" size="30" class="control" /></td></tr>
+            <tr><td class="label">3. Email Address</td><td><input type="text" id="email" name="email" size="30" class="control" /></td></tr>
+            <tr><td class="label">4. Telp Number</td><td><input type="text" id="telp" name="telp" size="30" class="control" /></td></tr>
+          </table>
+        </div>
+
+        <div class="form-section">
+          <div class="section-title"><span>Reservation Room form</span></div>
+          <table class="form-grid">
+            <tr><td class="label">1. Reservation Name</td><td><input type="text" id="resname" name="resname" size="30" class="control" /></td></tr>
+            <tr><td class="label">2. Booking date</td><td><input type="text" id="booking" name="booking" size="20" class="control" placeholder="YYYY-MM-DD" /></td></tr>
+            <tr>
+              <td class="label">3. Room Type</td>
+              <td>
+                <select id="roomtype" name="roomtype" class="control">
+                  <option>Single</option>
+                  <option selected="selected">Deluxe</option>
+                  <option>Suite</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">4. Bed Type</td>
+              <td class="inline">
+                <label class="option" for="bed-single">
+                  <input type="radio" id="bed-single" name="bed" value="Single bed" checked="checked" /> Single bed
+                </label>
+                <label class="option" for="bed-double">
+                  <input type="radio" id="bed-double" name="bed" value="Double bed" /> Double bed
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">5. Breakfast</td>
+              <td class="inline">
+                <label class="option" for="bf-with">
+                  <input type="radio" id="bf-with" name="breakfast" value="With Breakfast" /> With Breakfast
+                </label>
+                <label class="option" for="bf-without">
+                  <input type="radio" id="bf-without" name="breakfast" value="Without Breakfast" /> Without Breakfast
+                </label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="form-section">
+          <div class="section-title"><span>Payment</span></div>
+          <table class="form-grid">
+            <tr><td class="label">1. Check in date</td><td><input type="text" id="checkin" name="checkin" size="20" class="control" placeholder="YYYY-MM-DD" /></td></tr>
+            <tr><td class="label">2. Check out date</td><td><input type="text" id="checkout" name="checkout" size="20" class="control" placeholder="YYYY-MM-DD" /></td></tr>
+            <tr>
+              <td class="label">3. Payment Method</td>
+              <td>
+                <select id="pay" name="pay" class="control">
+                  <option selected="selected">cash</option>
+                  <option>credit card</option>
+                  <option>transfer</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="actions">
+          <input type="submit" value="Submit Reservation" class="btn-primary" />
+          <input type="reset" value="Reset" class="btn-ghost" />
+        </div>
+      </form>
+
+      <footer class="footnote">
+        <small>&#169; 2025 Your Hotel Brand</small>
+      </footer>
+    </div>
+  </body>
+</html>
